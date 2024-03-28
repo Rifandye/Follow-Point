@@ -31,8 +31,7 @@ export default function EditUserPage() {
     const { name, value } = event.target;
     setInput({ ...input, [name]: value });
   }
-
-  console.log(input, "<<,");
+  
   return (
     <>
       <Navbar />

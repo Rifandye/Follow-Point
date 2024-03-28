@@ -59,7 +59,7 @@ export async function POST(request) {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
-
+    
     console.log("masuk post & created the order");
     return NextResponse.json({ orderId: order_id, transactionToken });
   } catch (error) {

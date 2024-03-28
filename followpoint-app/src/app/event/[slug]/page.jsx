@@ -1,10 +1,11 @@
 import ButtomSlugComponent from "@/components/buttomSlugComponent";
-import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import Link from "next/link";
 import { formatDate } from "@/utils/dateFormat";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import "./page.css";
+
 
 export const getEventDetails = async (slug) => {
   const response = await fetch(
@@ -31,14 +32,38 @@ export default async function EventDetailPage({ params }) {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow bg-[rgba(27,29,34,1)] flex flex-col justify-center items-center text-yellow-500 font-extrabold pb-10">
-          <div className="mb-4 mt-4 mx-auto sm:w-2/3 md:w-1/2 lg:w-2/5 xl:w-1/3 h-64 sm:h-72 md:h-96">
-            <img
-              src={data.image}
-              alt={data.title}
-              className="w-full h-full object-cover rounded-lg"
+      <Navbar />
+      <main className="bg-[rgba(27,29,34,1)] min-h-screen flex flex-col justify-center items-center text-yellow-500 font-extrabold pb-10">
+        <div className="mb-4 mt-4 mx-auto sm:w-2/3 md:w-1/2 lg:w-2/5 xl:w-1/3 h-64 sm:h-72 md:h-96">
+          <img
+            src={data.image}
+            alt={data.title}
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div className="font-bold text-yellow-500 text-2xl text-center mt-4">
+          {data.title}
+        </div>
+        <div className="text-white mt-3 mb-5 mx-auto sm:w-2/3 md:w-1/2 lg:w-2/5 xl:w-1/3 text-center bg-gray-800 bg-opacity-25 p-4 rounded-lg shadow">
+          {data.description.split("\n").map((paragraph, idx) => (
+            <p key={idx} className="mb-4 last:mb-0 text-sm">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+        <div className="flex items-center justify-center text-yellow-500 text-sm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M8 7V3m8 4V3m-9 8h10M3 12l2-2m16 2l-2-2m-6 6h6"
             />
           </div>
           <div className="font-bold text-yellow-500 text-2xl text-center mt-4">

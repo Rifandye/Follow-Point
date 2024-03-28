@@ -95,7 +95,7 @@ export default function EventBuyTicketPage({ params }) {
       },
     });
   };
-
+  
   const DayIcon = () => (
     <svg
       className="w-6 h-6 mr-2 text-yellow-500"
