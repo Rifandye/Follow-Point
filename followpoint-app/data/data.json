@@ -1,0 +1,463 @@
+[
+  {
+    "title": "Summer Beats Festival",
+    "slug": "summer-beats-festival",
+    "description": "The Summer Beats Festival is the highlight of this year's cultural calendar, bringing together music enthusiasts from all corners for a weekend of sonic celebration. Set against the scenic backdrop of Central Park, New City, this festival promises an eclectic lineup of world-renowned musicians, bands, and DJs across multiple stages. Beyond the music, attendees will be treated to a gastronomic journey with gourmet food stalls, craft beer gardens, and cocktail bars featuring local and international delicacies. Interactive art installations, workshop zones, and chill-out spaces ensure a rich, multi-sensory experience. Whether you're a die-hard music fan or a family looking for a memorable summer outing, the Summer Beats Festival offers something for everyone.",
+    "date": "2024-08-12",
+    "location": "Central Park, New City",
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694296/Summer_Beats_General_1080x1080_ws1eni.jpg",
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694297/csm_Summer_Beats_4f8b550344_fdio5j.jpg",
+    "organizer": "Beats Entertainment Inc.",
+    "venueFileName": "bazar",
+    "tickets": [
+      { "ticketId": "e1t1", "name": "friday", "price": 500000, "stock": 500 },
+      { "ticketId": "e1t2", "name": "saturday", "price": 700000, "stock": 500 },
+      { "ticketId": "e1t3", "name": "sunday", "price": 600000, "stock": 500 }
+    ],
+    "booth": [
+      {
+        "name": "Merch Booth",
+        "description": "Step into the official festival merchandise booth, a treasure trove of festival memorabilia, where you can immortalize your experience with our exclusive collection. From the vibrant designs of our t-shirts and hats to the collectible posters, each item has been crafted to capture the spirit of the festival. Don’t forget to check out our souvenir water bottles - perfect for staying hydrated while you revel in the festivities.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694599/metalmerch_vpqgks.jpg",
+        "items": [
+          { "itemName": "Festival T-Shirt", "price": 20000 },
+          { "itemName": "Limited Edition Hat", "price": 15000 },
+          { "itemName": "Festival Poster", "price": 5000 },
+          { "itemName": "Souvenir Water Bottle", "price": 12000 }
+        ]
+      },
+      {
+        "name": "Food Truck Fiesta",
+        "description": "Indulge your taste buds at the Food Truck Fiesta, a culinary paradise featuring a handpicked selection of the city's finest food trucks. Dive into a world of flavors with our gourmet burgers, savor the creativity of our vegan taco platters, cool off with our artisanal ice cream, or treat yourself to our decadently loaded fries. Each dish is a masterpiece, waiting to take you on a delicious journey through the city's best cuisines.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694600/53205599947_0d757b1a4b_b_zfipjd.jpg",
+        "items": [
+          { "itemName": "Gourmet Burger", "price": 25000 },
+          { "itemName": "Vegan Taco Platter", "price": 20000 },
+          { "itemName": "Artisanal Ice Cream", "price": 10000 },
+          { "itemName": "Loaded Fries", "price": 15000 }
+        ]
+      },
+      {
+        "name": "VIP Lounge",
+        "description": "Enter the realm of exclusivity in our VIP Lounge, a sanctuary designed for the elite festival-goer. With complimentary drinks, gourmet snacks, and access to private restrooms, every aspect of your comfort has been considered. Enjoy premium views of the stage from this haven of luxury, where every moment is tailored to offer an unparalleled festival experience. The VIP Lounge is your ticket to an unforgettable, upscale festival adventure.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694604/underscored-admirals-club-dca-lounge-pavilion_ezimk9.jpg",
+        "items": [
+          {
+            "itemName": "Complimentary Drink Voucher",
+            "price": 0,
+            "note": "Exclusive to VIP Lounge attendees"
+          },
+          {
+            "itemName": "Gourmet Snack Plate",
+            "price": 0,
+            "note": "Exclusive to VIP Lounge attendees"
+          },
+          {
+            "itemName": "Premium Viewing Area Access",
+            "price": 0,
+            "note": "Exclusive to VIP Lounge attendees"
+          }
+        ]
+      },
+      {
+        "name": "Interactive Art Installations",
+        "description": "Immerse yourself in the transformative world of interactive art installations, where creativity knows no bounds. Engage with and contribute to live art pieces created by talented local artists, in an ever-evolving tapestry of expression. For those seeking a unique memento, customize your own digital artwork or capture the moment with a souvenir photo. Dive into this artistic odyssey, where participation breathes life into inspiration.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694610/Iregular_LEloi_Daniel_Iregui_SOLSTICE_1_ewuj4x.png",
+        "items": [
+          {
+            "itemName": "Participate in Live Art",
+            "price": 0,
+            "note": "Free participation"
+          },
+          { "itemName": "Customized Digital Artwork", "price": 30000 },
+          { "itemName": "Art Installation Souvenir Photo", "price": 15000 }
+        ]
+      },
+      {
+        "name": "Eco Zone",
+        "description": "Embrace sustainability in our Eco Zone, an educational hub dedicated to eco-friendly living and environmental awareness. Participate in activities and initiatives that not only enlighten but also empower you to make a difference. From reusable eco bags and bamboo utensil sets to eco-friendly water bottles, each item is a step towards a greener tomorrow. Join our eco workshops at no extra cost, and be part of the global movement towards a sustainable future.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694601/FZTSQhMWIAAL-NW_re0v8w.jpg",
+        "items": [
+          { "itemName": "Reusable Eco Bag", "price": 10000 },
+          { "itemName": "Bamboo Utensil Set", "price": 12000 },
+          { "itemName": "Eco-Friendly Water Bottle", "price": 15000 },
+          {
+            "itemName": "Participation in Eco Workshop",
+            "price": 0,
+            "note": "Free participation"
+          }
+        ]
+      },
+      {
+        "name": "Kids' Play Area",
+        "description": "Discover a world of fun and learning in our Kids' Play Area, a secure and engaging space designed for our youngest festival-goers. With interactive games, face painting, and educational workshops, there's something to spark the imagination of every child. Dive into a world where play and learning collide, and watch as your children adorn themselves in vibrant face paint, exchange game tokens for thrilling adventures, or explore new ideas in our workshops. Don't forget to commemorate their festival adventure with a specially designed kids' festival t-shirt.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694601/Rubber-flooring_jrw3p8.jpg",
+        "items": [
+          { "itemName": "Face Painting", "price": 5000 },
+          {
+            "itemName": "Interactive Game Tokens",
+            "price": 1000,
+            "note": "Per token"
+          },
+          {
+            "itemName": "Educational Workshop Access",
+            "price": 0,
+            "note": "Free for children"
+          },
+          { "itemName": "Kids' Festival T-Shirt", "price": 15000 }
+        ]
+      }
+    ],
+    "createdAt": "2024-03-17T00:00:00Z",
+    "updatedAt": "2024-03-17T00:00:00Z"
+  },
+  {
+    "title": "Gourmet Bites Festival",
+    "slug": "gourmet-bites-festival",
+    "description": "The Gourmet Bites Festival is a culinary extravaganza showcasing the finest in local and international cuisine. Set in the picturesque Downtown Riverfront Park, this event is a food lover's paradise, offering a chance to explore gourmet dishes, street food favorites, and innovative culinary creations from around the globe. Attendees can look forward to live cooking demonstrations, meet-and-greets with renowned chefs, and a variety of interactive food and beverage workshops. The festival also features live music, a craft beer garden, and a wine tasting pavilion, making it the perfect destination for a gastronomic adventure with family and friends.",
+    "date": "2024-09-05",
+    "location": "Downtown Riverfront Park",
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694880/The-Shafston-Hotel-bites-brews-Miss-Foodie-3_dqqwxk.jpg",
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710694891/Screenshot-2020-07-17-at-16.16.55_ci5xll.webp",
+    "organizer": "Culinary Events Ltd.",
+    "venueFileName": "bazar",
+    "tickets": [
+      { "ticketId": "e2t1", "name": "thursday", "price": 45000, "stock": 1000 },
+      { "ticketId": "e2t2", "name": "friday", "price": 45000, "stock": 1000 },
+      { "ticketId": "e2t3", "name": "saturday", "price": 55000, "stock": 1000 },
+      { "ticketId": "e2t4", "name": "sunday", "price": 55000, "stock": 1000 }
+    ],
+    "booth": [
+      {
+        "name": "The Burger Joint",
+        "description": "Indulge in gourmet burgers crafted with a unique twist, featuring locally sourced ingredients that elevate the classic burger experience. Each bite is a testament to culinary creativity and local sustainability, offering a range of flavors that cater to all tastes, from meat lovers to vegetarians.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695547/hou_food_20160525theburgerjoint_chuckcook_027_1__o5lrxt.jpg",
+        "items": [
+          { "itemName": "Classic Gourmet Burger", "price": 15000 },
+          { "itemName": "Avocado & Bacon Burger", "price": 18000 },
+          { "itemName": "Impossible™ Burger", "price": 16000 },
+          { "itemName": "Truffle Fries", "price": 8000 }
+        ]
+      },
+      {
+        "name": "Sushi Spectacular",
+        "description": "Experience the art of sushi with our Sushi Spectacular, where fresh, artisanal sushi rolls, nigiri, and sashimi are meticulously prepared by top sushi chefs. Dive into the delicate flavors of the sea, presented with impeccable craftsmanship and the freshest ingredients.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695544/domestic-event-1_hpfmhw.jpg",
+        "items": [
+          { "itemName": "California Roll Platter", "price": 20000 },
+          { "itemName": "Nigiri Assortment", "price": 25000 },
+          { "itemName": "Spicy Tuna Roll", "price": 22000 },
+          { "itemName": "Sashimi Deluxe", "price": 30000 }
+        ]
+      },
+      {
+        "name": "Vegan Delights",
+        "description": "Discover a world where vegan cuisine shines, offering a variety of delicious and inventive dishes that will delight even the most discerning palates. Our menu is a celebration of plant-based creativity, featuring dishes that are as nutritious as they are delicious, proving that compassionate eating can be gourmet.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695550/dc87a667565611.5b3e08a3afd27_mfmvrz.jpg",
+        "items": [
+          { "itemName": "Quinoa & Avocado Salad", "price": 12000 },
+          { "itemName": "Vegan Burger", "price": 15000 },
+          { "itemName": "Vegan Chocolate Cake", "price": 10000 },
+          { "itemName": "Chickpea Curry Bowl", "price": 13000 }
+        ]
+      },
+      {
+        "name": "Italian Street Eats",
+        "description": "Savor the authentic taste of Italy with our selection of pizzas and pastas, made using traditional recipes and ingredients. From the heart of Italy to your plate, enjoy the simplicity and richness of flavors that have made Italian cuisine beloved around the world.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695562/24437fc79efdc297db5cf4a58c28ff58_danzpe.jpg",
+        "items": [
+          { "itemName": "Margherita Pizza", "price": 14000 },
+          { "itemName": "Spaghetti Carbonara", "price": 16000 },
+          { "itemName": "Pesto Gnocchi", "price": 15000 },
+          { "itemName": "Tiramisu", "price": 9000 }
+        ]
+      },
+      {
+        "name": "BBQ & Smokery",
+        "description": "Delight in the deep, rich flavors of slow-cooked, smoked meats and BBQ favorites, all complemented by homemade sauces and rubs. Our BBQ & Smokery offers a rustic and hearty dining experience that pays homage to the time-honored traditions of barbecue.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695543/man-grilling-cevapi-and-pljeskavica-meat-on-outdoor-grill-at-a-winter-food-festival-2AF3FGT_k7hx6c.jpg",
+        "items": [
+          { "itemName": "Pulled Pork Sandwich", "price": 18000 },
+          { "itemName": "Smoked Brisket", "price": 25000 },
+          { "itemName": "BBQ Ribs Half Rack", "price": 22000 },
+          { "itemName": "Cornbread with Honey Butter", "price": 7000 }
+        ]
+      },
+      {
+        "name": "Dessert Oasis",
+        "description": "Enter a sweet paradise at Dessert Oasis, where cakes, pastries, ice creams, and gourmet desserts are crafted to perfection. Each dessert is a masterpiece of flavor, designed to offer a blissful escape into sweetness.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695542/uss-pharaohs-dessert-oasis-750x422_bbfaef.avif",
+        "items": [
+          { "itemName": "Assorted Macarons", "price": 12000 },
+          { "itemName": "Cheesecake Slice", "price": 10000 },
+          { "itemName": "Gourmet Ice Cream Scoop", "price": 8000 },
+          { "itemName": "Chocolate Fondant", "price": 11000 }
+        ]
+      },
+      {
+        "name": "Craft Beer Hub",
+        "description": "Explore a wide range of craft beers from the best local and national breweries at our Craft Beer Hub. Sample unique brews, discover new favorites, and enjoy the rich tapestry of flavors that the craft beer world has to offer.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695550/berlin-germany-august-5-2017russian-craft-beer-stall-at-the-international-berlin-beer-festival-2H4KK2J_d1ajeu.jpg",
+        "items": [
+          { "itemName": "Local IPA Draft", "price": 6000 },
+          { "itemName": "Craft Lager Bottle", "price": 5000 },
+          { "itemName": "Seasonal Ale Draft", "price": 7000 },
+          { "itemName": "Non-Alcoholic Craft Beer", "price": 4000 }
+        ]
+      },
+      {
+        "name": "Global Street Food",
+        "description": "Take a culinary tour with our Global Street Food offerings, featuring street food delicacies from Asia, Latin America, and beyond. Each dish is a window into the culture it represents, offering a taste of the world's diverse culinary landscape.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695548/a0001911_main_ltff8b.webp",
+        "items": [
+          { "itemName": "Tacos Al Pastor", "price": 15000 },
+          { "itemName": "Korean Fried Chicken", "price": 17000 },
+          { "itemName": "Falafel Wrap", "price": 13000 },
+          { "itemName": "Takoyaki Balls", "price": 12000 }
+        ]
+      },
+      {
+        "name": "Coffee Connoisseurs",
+        "description": "Explore the world of coffee with tastings, workshops, and barista demonstrations at Coffee Connoisseurs. Dive deep into the bean's journey from farm to cup, and elevate your coffee knowledge and appreciation through hands-on experiences.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695560/IMG_4583_ylcuyq.jpg",
+        "items": [
+          { "itemName": "Espresso Shot", "price": 3000 },
+          { "itemName": "Cold Brew Coffee", "price": 5000 },
+          {
+            "itemName": "Latte Art Workshop",
+            "price": 20000,
+            "note": "Includes your own latte creation"
+          },
+          { "itemName": "Specialty Tea", "price": 4000 }
+        ]
+      },
+      {
+        "name": "Cheese & Wine Paradise",
+        "description": "Experience the perfect harmony of flavors with our selection of fine cheeses paired with exquisite wines from around the world. Cheese & Wine Paradise is a gourmet adventure, inviting you to explore sophisticated pairings that celebrate the best of both worlds.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695546/2022-dca-disney-california-adventure-food-and-wine-festival-nuts-about-cheese-marketplace-booth-4_xmsqle.jpg",
+        "items": [
+          { "itemName": "Cheese Tasting Plate", "price": 18000 },
+          { "itemName": "Glass of Red Wine", "price": 8000 },
+          { "itemName": "Glass of White Wine", "price": 8000 },
+          { "itemName": "Wine & Cheese Pairing Experience", "price": 25000 }
+        ]
+      }
+    ],
+    "createdAt": "2024-03-17T00:00:00Z",
+    "updatedAt": "2024-03-17T00:00:00Z"
+  },
+  {
+    "title": "Acoustic Evenings",
+    "slug": "acoustic-evenings",
+    "description": "Acoustic Evenings brings an intimate concert experience to the heart of the city, featuring a lineup of talented singer-songwriters and acoustic bands. Set under the stars at the cozy Greenfield Park, this event promises a night of heartfelt melodies, soul-stirring lyrics, and warm, inviting vibes. Beyond the music, the festival offers an array of booths catering to every interest - from vintage vinyl and artisan crafts to gourmet snacks and interactive art installations. Perfect for music lovers of all ages, Acoustic Evenings is an ode to the power of music and community.",
+    "date": "2024-10-06",
+    "location": "Greenfield Park",
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696065/Acoustic-Night-3_lplian.png",
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696064/395185821_339709171923254_5896553182782724634_n_w1joos.jpg",
+    "organizer": "Harmony Events",
+    "venueFileName": "venue",
+    "tickets": [
+      { "ticketId": "e3t1", "name": "saturday", "price": 35000, "stock": 800 }
+    ],
+    "booth": [
+      {
+        "name": "Vinyl Vintage",
+        "description": "Step back in time with our Vinyl Vintage booth, featuring rare and vintage vinyl records for collectors and music enthusiasts. This booth is a nostalgic paradise where each record holds a story, ready to take you on a journey through the golden eras of music.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696758/130731162424-vvj-booth_d20xvd.jpg",
+        "items": [
+          { "itemName": "The Beatles - Abbey Road", "price": 12000 },
+          { "itemName": "Fleetwood Mac - Rumours", "price": 9500 },
+          { "itemName": "Pink Floyd - Dark Side of the Moon", "price": 11000 }
+        ]
+      },
+      {
+        "name": "Handmade Crafts",
+        "description": "Discover the beauty of artisan craftsmanship at our Handmade Crafts booth. Here, local artists showcase their passion through unique handmade goods, offering a glimpse into the heart and soul poured into every piece.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696758/a39d9b226828b3b722e52700fb6f49ad_a2fqxi.jpg",
+        "items": [
+          { "itemName": "Handwoven Scarf", "price": 3000 },
+          { "itemName": "Pottery Vase", "price": 4500 },
+          { "itemName": "Leather Journal", "price": 2500 }
+        ]
+      },
+      {
+        "name": "Gourmet Popcorn",
+        "description": "Elevate your snacking experience at our Gourmet Popcorn booth. From the comforting classic butter to bold and adventurous new flavors, our popcorn is guaranteed to delight your taste buds with its perfect blend of crunch and flavor.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696759/20231014_110633_1400x_pdjv30.webp",
+        "items": [
+          { "itemName": "Classic Butter", "price": 500 },
+          { "itemName": "Caramel Delight", "price": 700 },
+          { "itemName": "Cheddar Cheese", "price": 600 }
+        ]
+      },
+      {
+        "name": "Coffee Corner",
+        "description": "Warm your night and awaken your senses at the Coffee Corner. This cozy retreat offers a selection of specialty coffees and teas from around the globe, making it the perfect spot for coffee lovers and tea enthusiasts alike.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696760/a22f83ec4568a1a8cc508722f44c079e_wusxrr.webp",
+        "items": [
+          { "itemName": "Espresso", "price": 300 },
+          { "itemName": "Latte", "price": 400 },
+          { "itemName": "Herbal Tea", "price": 350 }
+        ]
+      },
+      {
+        "name": "Indie Merch",
+        "description": "Support the performing artists and bands by visiting our Indie Merch booth. This is your go-to place for exclusive merchandise, including band T-shirts, album posters, and vinyl stickers, allowing you to take a piece of the music home with you.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696758/images-104_gwzxxz.jpg",
+        "items": [
+          { "itemName": "Band T-shirt", "price": 2500 },
+          { "itemName": "Album Poster", "price": 1500 },
+          { "itemName": "Vinyl Stickers Pack", "price": 500 }
+        ]
+      },
+      {
+        "name": "Eco-Friendly Finds",
+        "description": "Join the movement towards a greener lifestyle with our Eco-Friendly Finds. This booth features sustainable and eco-friendly products, from reusable water bottles to organic cotton tote bags, helping you make environmentally conscious choices.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696760/Photo_The-SM-Stores-Green-Finds-copy_vnorej.jpg",
+        "items": [
+          { "itemName": "Reusable Water Bottle", "price": 2000 },
+          { "itemName": "Bamboo Toothbrush Set", "price": 1200 },
+          { "itemName": "Organic Cotton Tote Bag", "price": 1800 }
+        ]
+      },
+      {
+        "name": "Book Nook",
+        "description": "Book lovers, rejoice! The Book Nook is a cozy corner filled with local authors and literary classics. It's a haven for those who find solace in the written word, offering a wide range of genres to get lost in.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696760/5f8db99781871.image_ofdr8v.jpg",
+        "items": [
+          { "itemName": "Local Author Novel", "price": 2200 },
+          { "itemName": "Poetry Collection", "price": 2000 },
+          { "itemName": "Historical Fiction", "price": 2500 }
+        ]
+      },
+      {
+        "name": "Art Alley",
+        "description": "Experience the magic of live art demonstrations and explore a gallery of local artwork for sale at Art Alley. This booth is a celebration of creativity and imagination, showcasing the talents of local artists in a vibrant and inspiring setting.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696763/Festival_Blog_Header_01c9f257-68f1-4305-8e78-c434da464e48_1086x_olozt6.webp",
+        "items": [
+          { "itemName": "Framed Watercolor Painting", "price": 5500 },
+          { "itemName": "Abstract Art Sculpture", "price": 8000 },
+          { "itemName": "Handmade Jewelry Box", "price": 3000 }
+        ]
+      },
+      {
+        "name": "T-Shirt Printing",
+        "description": "Express yourself with custom t-shirt printing available on the spot at our T-Shirt Printing booth. Choose from a variety of designs or create your own for a personalized touch to your festival attire.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696770/img_0726_zpbafb.webp",
+        "items": [
+          { "itemName": "Custom Text Tee", "price": 2000 },
+          { "itemName": "Graphic Design Tee", "price": 2500 },
+          { "itemName": "Photo Print Tee", "price": 3000 }
+        ]
+      },
+      {
+        "name": "Foodie Lane",
+        "description": "Embark on a culinary adventure at Foodie Lane, where street food from around the world awaits. From gourmet burgers to Asian noodle bowls, this booth offers delicious eats and treats to satisfy your cravings.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710695548/a0001911_main_ltff8b.webp",
+        "items": [
+          { "itemName": "Taco Trio", "price": 1500 },
+          { "itemName": "Gourmet Burger", "price": 2000 },
+          { "itemName": "Asian Noodle Bowl", "price": 1800 }
+        ]
+      },
+      {
+        "name": "Mocktail Bar",
+        "description": "Refresh and rejuvenate with innovative non-alcoholic cocktails at our Mocktail Bar. Enjoy a selection of refreshing drinks, including fruit punches and mojito mocktails, crafted to quench your thirst and elevate your festival experience.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696762/21317bb2df9726e66955bf2bfb0b96b6_bt7usj.jpg",
+        "items": [
+          { "itemName": "Fruit Punch", "price": 800 },
+          { "itemName": "Mojito Mocktail", "price": 900 },
+          { "itemName": "Virgin Sangria", "price": 850 }
+        ]
+      },
+      {
+        "name": "Candle Cove",
+        "description": "Illuminate your senses at Candle Cove, where hand-poured, scented candles with unique fragrances create a soothing ambiance. Each candle is a work of art, offering a blend of scents that will transform any space into a tranquil haven.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696768/HelpingHandsforTranquility-selling-at-markets_louhzv.jpg",
+        "items": [
+          { "itemName": "Lavender Scented Candle", "price": 1500 },
+          { "itemName": "Vanilla Bean Candle", "price": 1500 },
+          { "itemName": "Eucalyptus Mint Candle", "price": 1500 }
+        ]
+      },
+      {
+        "name": "Herbal Haven",
+        "description": "Embrace a healthy lifestyle with organic teas, herbs, and wellness products available at Herbal Haven. This booth is dedicated to promoting well-being through natural remedies and organic products, perfect for those seeking a holistic approach to health.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696772/HerbRecap2_cl1jkc.jpg",
+        "items": [
+          { "itemName": "Chamomile Tea Blend", "price": 1200 },
+          { "itemName": "Peppermint Essential Oil", "price": 1000 },
+          { "itemName": "Herbal Sleep Aid", "price": 1300 }
+        ]
+      },
+      {
+        "name": "Portrait Sketching",
+        "description": "Capture a moment in time with portrait sketching by talented local artists at this booth. Whether you prefer a quick sketch, a detailed portrait, or a fun caricature, this is a unique opportunity to have your likeness captured on paper.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696770/Copy_of_11F1808F-1F68-4E65-B595-5B1BFDC59C5D-3179-0000017E71F3971A-3_ttrjna.jpg",
+        "items": [
+          { "itemName": "Quick Sketch", "price": 1000 },
+          { "itemName": "Detailed Portrait", "price": 2500 },
+          { "itemName": "Caricature", "price": 1500 }
+        ]
+      },
+      {
+        "name": "Jewelry Junction",
+        "description": "Adorn yourself with exquisite handmade jewelry pieces from Jewelry Junction. Crafted by local artisans, each piece tells a story of beauty and craftsmanship, making for a timeless keepsake or a special gift.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696782/Apr-2015-011_byjsnn.jpg",
+        "items": [
+          { "itemName": "Silver Pendant Necklace", "price": 2500 },
+          { "itemName": "Handcrafted Earrings", "price": 2000 },
+          { "itemName": "Beaded Bracelet", "price": 1500 }
+        ]
+      },
+      {
+        "name": "Gaming Arena",
+        "description": "Gamers unite at the Gaming Arena, a mini gaming paradise where video game lovers can compete and enjoy their favorite games. Offering everything from casual gaming sessions to competitive tournaments and immersive VR experiences, this booth is a must-visit for gaming enthusiasts.",
+        "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710696768/Multiplay-Insomnia-Gaming-Festival-I55_54_kn2gai.jpg",
+        "items": [
+          { "itemName": "1-hour Gaming Session", "price": 500 },
+          { "itemName": "Gaming Tournament Entry", "price": 1000 },
+          { "itemName": "Virtual Reality Experience", "price": 1500 }
+        ]
+      }
+    ],
+    "createdAt": "2024-03-17T00:00:00Z",
+    "updatedAt": "2024-03-17T00:00:00Z"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962516/stock-photo-rock-music-flyer-live-event-poster-background-template-with-guitar-rock-n-roll-background-design-2001432545_znmmrv.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962509/istockphoto-964569164-612x612_s4ekm2.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962509/16824780418312_btvlvh.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962508/fleur-sciortino-summer-book-fest-poster_lfzt5b.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962506/1280w-WAaNGnbUNC0_hlysrd.webp"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962506/large-33-308x435_ipuyq9.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962506/4535650015b7608dce2f8e36a42785eb_odfuf7.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962505/9f45b74396846860c77ab1485e41aadc_vqseqf.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962816/37de5deb-1ca7-4e60-b254-374b08708817_jwlus1.webp"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710962816/d61c1d8bb37f7225c5fa56c28ba99276_ypuiba.jpg"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710963414/b48c4760-570c-4440-a637-ad717f48d1e2_couhwb.png"
+  },
+  {
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1710963414/saturday-night-party-design-template-5c51d2955417c1fa121bcf02fce9ba40_screen_so6bw4.jpg"
+  }
+]
