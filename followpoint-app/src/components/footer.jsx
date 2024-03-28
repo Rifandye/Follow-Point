@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="footer bg-primary text-primary-content">
-      <div className="container mx-auto flex flex-col justify-center items-center p-10 h-full">
+    <footer className="footer bg-primary text-primary-content mb-0">
+      <div className="container mx-auto flex flex-col justify-center items-center p-10 h-full -mt-200">
         <div className="flex items-center">
           <img
             src="/FOOTER_1-removebg-preview.png"
@@ -30,7 +30,7 @@ export default function Footer() {
             </span>
           </a>
           <a role="button">
-            <span class="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:fill-[#d7bf03]">
+            <span className="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:fill-[#d7bf03]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -50,7 +50,7 @@ export default function Footer() {
             </span>
           </a>
           <a role="button">
-            <span class="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:fill-[#d7bf03]">
+            <span className="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:fill-[#d7bf03]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

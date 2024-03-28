@@ -62,13 +62,13 @@ export const getUserData = async () => {
     }
   );
 
-
   if (!response.ok) {
     throw new Error("Error!");
   }
 
   const {data} = await response.json();
   delete data.password
+  
   return data;
 };
 
@@ -93,3 +93,9 @@ export const handleEdit = async (input) => {
 
   return redirect("/user/transactions");
 };
+
+
+export async function handleLogout() {
+  cookies().delete("Authorization");
+  redirect("/login");
+}

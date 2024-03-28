@@ -1,118 +1,156 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import React, { useRef, useState } from "react";
+import { useGLTF, Html } from "@react-three/drei";
 
-export function Bazar({ data }) {
+export function Bazar({ data, onTenantClick }) {
   const { nodes, materials } = useGLTF("/Bazar.glb");
 
-  //! JANGAN SENTUH APAPUN DISINI
   const getBoothProps = (index) => {
-    const booths = [
+    const boothsData = [
       {
-        geometry: nodes.Mesh60_Model.geometry,
-        material: materials["Happy Glow"],
-        position: [-576.779, -233.277, -1.75],
-        rotation: [Math.PI / 2, 0, 0],
+        name: "Tenant1",
+        position: [-320.781, 553.252, -7.873],
+        geometry: "Tenant1",
+        material: "Spanish Style",
       },
       {
-        geometry: nodes.Mesh66_Model.geometry,
-        material: materials.Nila,
-        position: [-576.779, -233.277, -1.75],
-        rotation: [Math.PI / 2, 0, 0],
+        name: "Tenant2",
+        position: [26.407, 553.252, -7.873],
+        geometry: "Tenant2",
+        material: "Champion",
       },
       {
-        geometry: nodes.Merged_Objects.geometry,
-        material: materials._Color_M01_1,
-        position: [-232.518, 179.774, 0.374],
-        rotation: undefined,
+        name: "Tenant3",
+        position: [379.787, 553.252, -7.873],
+        geometry: "Tenant3",
+        material: "_Color_M01_1",
       },
       {
-        geometry: nodes.Merged_Objects_1.geometry,
-        material: materials["Good Karma"],
-        position: [-95.83, 179.774, 0.374],
-        rotation: undefined,
+        name: "Tenant4",
+        position: [-843.55, 589.882, -13.269],
+        geometry: "Tenant4",
+        material: "_Color_A05_1",
       },
       {
-        geometry: nodes.Merged_Objects_2.geometry,
-        material: materials["Breath of Spring"],
-        position: [43.295, 179.774, 0.374],
-        rotation: undefined,
+        name: "Tenant5",
+        position: [1366.602, 93.901, -4.478],
+        geometry: "Tenant5",
+        material: "Color_H07",
       },
       {
-        geometry: nodes.Merged_Objects_3.geometry,
-        material: materials["Crocodile Smile"],
-        position: [431.803, -1.073, 1.711],
-        rotation: undefined,
+        name: "Tenant6",
+        position: [1366.602, -186.982, -4.478],
+        geometry: "Tenant6",
+        material: "Lagoon Glow",
       },
       {
-        geometry: nodes.Merged_Objects_4.geometry,
-        material: materials.Bavarian,
-        position: [431.803, -111.657, 1.711],
-        rotation: undefined,
+        name: "Tenant7",
+        position: [613.557, -407.69, -7.873],
+        geometry: "Tenant7",
+        material: "Incognito",
       },
       {
-        geometry: nodes.Merged_Objects_5.geometry,
-        material: materials["Pleasant Dream"],
-        position: [135.33, -198.55, 0.374],
-        rotation: undefined,
+        name: "Tenant8",
+        position: [16.742, -407.69, -7.873],
+        geometry: "Tenant8",
+        material: "Haiti",
       },
       {
-        geometry: nodes.Merged_Objects_6.geometry,
-        material: materials.Promenade,
-        position: [-99.635, -198.55, 0.374],
-        rotation: undefined,
+        name: "Tenant9",
+        position: [-856.256, -315.257, -7.873],
+        geometry: "Tenant9",
+        material: "Color_H07",
       },
       {
-        geometry: nodes.Merged_Objects_7.geometry,
-        material: materials.Aztec,
-        position: [-443.335, -162.159, 0.374],
-        rotation: undefined,
+        name: "Tenant10",
+        position: [877.952, 549.344, -9.873],
+        geometry: "Tenant10",
+        material: "Color_I03",
       },
     ];
-
-    return booths[index % booths.length];
+    return boothsData[index % boothsData.length];
   };
 
   return (
-    <group dispose={null}>
-      <group
-        position={[0.25, 0, -0.09]}
-        rotation={[-Math.PI / 2, 0, 0]}
-        scale={0.001}
-      >
-        <mesh //gakepake
-          castShadow
-          receiveShadow
-          geometry={nodes.Mesh1_Group1_Model.geometry}
-          material={materials.FrontColor}
-          position={[-576.779, -233.277, -1.75]}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
-
-        {data.map((item, index) => {
-          const { geometry, material, position, rotation } =
-            getBoothProps(index);
-          return (
+    <>
+      <group dispose={null}>
+        <group name="Bazar">
+          <group name="Bazar_1" rotation={[-Math.PI / 2, 0, 0]} scale={0.001}>
             <mesh
-              key={item.id}
+              name="Floor"
               castShadow
               receiveShadow
-              geometry={geometry}
-              material={material}
-              position={position}
-              rotation={rotation || [0, 0, 0]}
+              geometry={nodes.Floor.geometry}
+              material={materials.Color_I02}
+              position={[-1195.203, -495.898, 0]}
+              rotation={[Math.PI / 2, 0, 0]}
             />
-          );
-        })}
+            {data.map((item, index) => {
+              const { position, geometry, material } = getBoothProps(index);
+              const iconPosition = [
+                position[0],
+                position[1],
+                position[2] + 500,
+              ];
+              const [isHovered, setIsHovered] = useState(false);
 
-        <mesh //gakepake
-          castShadow
-          receiveShadow
-          geometry={nodes.Merged_Objects_8.geometry}
-          material={materials._auto_}
-          position={[239.422, 178.235, -0.414]}
-        />
+              const defaultStyle = {
+                color: "#fff",
+                background: "rgba(0, 0, 0, 0.5)",
+                border: "1px solid rgba(255, 255, 255, 0.5)",
+                cursor: "pointer",
+                padding: "5px 10px",
+                textAlign: "center",
+                textShadow: "0 0 4px rgba(0, 0, 0, 0.5)",
+                fontFamily: "Arial, sans-serif",
+                fontSize: "14px",
+                borderRadius: "4px",
+                transition: "all 0.3s ease",
+              };
+
+              const hoverStyle = {
+                ...defaultStyle,
+                background: "rgba(255, 255, 255, 0.7)",
+                color: "#000",
+                border: "1px solid #fff",
+              };
+
+              return (
+                <group key={index}>
+                  <mesh
+                    name={item.name}
+                    castShadow
+                    receiveShadow
+                    geometry={nodes[geometry].geometry}
+                    material={materials[material]}
+                    position={position}
+                  />
+                  <Html position={iconPosition} scaleFactor={10} center>
+                    <button
+                      key={item.name}
+                      style={isHovered ? hoverStyle : defaultStyle}
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                      onClick={() => onTenantClick(item)}
+                    >
+                      {item.name}
+                    </button>
+                  </Html>
+                </group>
+              );
+            })}
+            <mesh
+              name="Mesh60_Model"
+              castShadow
+              receiveShadow
+              geometry={nodes.Mesh60_Model.geometry}
+              material={materials.Color_G06}
+              position={[-1195.203, -495.898, -13.269]}
+              rotation={[Math.PI / 2, 0, 0]}
+            />
+          </group>
+        </group>
       </group>
-    </group>
+    </>
   );
 }
 

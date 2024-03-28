@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ButtonSlugComponent({ data }) {
   return (
     <>
-      <div className="mt-10 flex justify-center gap-4">
+      <div className="mt-10  mb-10 flex justify-center gap-4">
         <Link href={`/event/${data.slug}/map`} passHref>
           <button className="btn">Show event map</button>
         </Link>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { handleLogout } from "@/actions/user";
 
 export default function DropdownSidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,8 @@ export default function DropdownSidebar() {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  const isLoggedIn = () => document.cookie.includes("Authorization");
 
   return (
     <>
@@ -32,22 +35,42 @@ export default function DropdownSidebar() {
               Events
             </div>
           </Link>
-          <Link href="/login">
+          <Link href="/user/transactions">
             <div
               className="text-yellow-400 text-lg mb-4 hover:text-white"
               onClick={toggleSidebar}
             >
-              Login
+              Transactions
             </div>
           </Link>
-          <Link href="/user/tickets">
+          <Link href="/user/edit">
             <div
               className="text-yellow-400 text-lg mb-4 hover:text-white"
               onClick={toggleSidebar}
             >
-              Tickets
+              Edit Profile
             </div>
           </Link>
+          {isLoggedIn() ? (
+            <div
+              className="text-yellow-400 text-lg mb-4 hover:text-white cursor-pointer"
+              onClick={() => {
+                handleLogout();
+                toggleSidebar();
+              }}
+            >
+              Logout
+            </div>
+          ) : (
+            <Link href="/login">
+              <div
+                className="text-yellow-400 text-lg mb-4 hover:text-white"
+                onClick={toggleSidebar}
+              >
+                Login
+              </div>
+            </Link>
+          )}
         </div>
       </div>
       <style jsx>{`

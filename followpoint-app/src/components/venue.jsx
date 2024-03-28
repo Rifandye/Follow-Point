@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import React, { useRef, useState } from "react";
+import { Html, useGLTF } from "@react-three/drei";
 
 //! JANGAN DISENTUH
 const boothPositions = [
@@ -21,67 +21,112 @@ const boothPositions = [
   [-0.11517262, 0.0107113, -0.01502018], //booth 15
 ];
 
-export function Venue({ data }) {
+export function Venue({ data, onTenantClick }) {
   const { nodes, materials } = useGLTF("/venue.glb");
+
   return (
     <group dispose={null}>
-      {data.map((venue, index) => (
-        <group
-          key={venue.id}
-          name="Booth_13"
-          position={boothPositions[index]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={0.00031028}
-        >
-          <mesh
-            name="Windows"
-            castShadow
-            receiveShadow
-            geometry={nodes.Windows.geometry}
-            material={materials["Windows 14"]}
-            position={[87.29199982, -52.29198837, -3.77000022]}
-          />
-          <mesh
-            name="Frames"
-            castShadow
-            receiveShadow
-            geometry={nodes.Frames.geometry}
-            material={materials["Frames 14"]}
-            position={[87.29199982, -52.29198837, -3.77000022]}
-          />
-          <mesh
-            name="Roof"
-            castShadow
-            receiveShadow
-            geometry={nodes.Roof.geometry}
-            material={materials["Roof 27"]}
-            position={[87.29199982, -52.29198837, -3.77000022]}
-          />
-          <mesh
-            name="Roof_02"
-            castShadow
-            receiveShadow
-            geometry={nodes.Roof_02.geometry}
-            material={materials["Roof 28"]}
-          />
-          <mesh
-            name="Main_body"
-            castShadow
-            receiveShadow
-            geometry={nodes.Main_body.geometry}
-            material={materials["Main body 14"]}
-            position={[87.29199982, -52.29198837, -3.77000022]}
-          />
-          <mesh
-            name="Plaster"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plaster.geometry}
-            material={materials["Plaster 14"]}
-            position={[0, 0, 2.05065417]}
-          />
-        </group>
-      ))}
+      {data.map((venue, index) => {
+        const iconPosition = [
+          boothPositions[index][0],
+          boothPositions[index][1],
+          boothPositions[index][2] + 100,
+        ];
+        const [isHovered, setIsHovered] = useState(false);
+
+        const defaultStyle = {
+          color: "#fff",
+          background: "rgba(0, 0, 0, 0.5)",
+          border: "1px solid rgba(255, 255, 255, 0.5)",
+          cursor: "pointer",
+          padding: "5px 10px",
+          textAlign: "center",
+          textShadow: "0 0 4px rgba(0, 0, 0, 0.5)",
+          fontFamily: "Arial, sans-serif",
+          fontSize: "14px",
+          borderRadius: "4px",
+          transition: "all 0.3s ease",
+        };
+
+        const hoverStyle = {
+          ...defaultStyle,
+          background: "rgba(255, 255, 255, 0.7)",
+          color: "#000",
+          border: "1px solid #fff",
+        };
+
+        return (
+          <>
+            <group
+              key={venue.id}
+              name="Booth_13"
+              position={boothPositions[index]}
+              rotation={[-Math.PI / 2, 0, 0]}
+              scale={0.00031028}
+            >
+              <mesh
+                name="Windows"
+                castShadow
+                receiveShadow
+                geometry={nodes.Windows.geometry}
+                material={materials["Windows 14"]}
+                position={[87.29199982, -52.29198837, -3.77000022]}
+              />
+              <mesh
+                name="Frames"
+                castShadow
+                receiveShadow
+                geometry={nodes.Frames.geometry}
+                material={materials["Frames 14"]}
+                position={[87.29199982, -52.29198837, -3.77000022]}
+              />
+              <mesh
+                name="Roof"
+                castShadow
+                receiveShadow
+                geometry={nodes.Roof.geometry}
+                material={materials["Roof 27"]}
+                position={[87.29199982, -52.29198837, -3.77000022]}
+              />
+              <mesh
+                name="Roof_02"
+                castShadow
+                receiveShadow
+                geometry={nodes.Roof_02.geometry}
+                material={materials["Roof 28"]}
+              />
+              <mesh
+                name="Main_body"
+                castShadow
+                receiveShadow
+                geometry={nodes.Main_body.geometry}
+                material={materials["Main body 14"]}
+                position={[87.29199982, -52.29198837, -3.77000022]}
+              />
+              <mesh
+                name="Plaster"
+                castShadow
+                receiveShadow
+                geometry={nodes.Plaster.geometry}
+                material={materials["Plaster 14"]}
+                position={[0, 0, 2.05065417]}
+              />
+              <Html position={iconPosition} scaleFactor={10} center>
+                <button
+                  key={venue.name}
+                  style={isHovered ? hoverStyle : defaultStyle}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onClick={() => onTenantClick(venue)}
+                >
+                  {venue.name}
+                </button>
+              </Html>
+            </group>
+            ;
+          </>
+        );
+      })}
 
       <group
         name="Group_4"

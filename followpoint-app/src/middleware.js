@@ -41,5 +41,5 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/api/user/:path*", "/api/buy/initiate/:path*"]
+  matcher: ["/api/user/:path*", "/api/buy/initiate/:path*"],
 };

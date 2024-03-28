@@ -20,6 +20,11 @@ export default function RegisterPage() {
   return (
     <>
       <main className="bg-[rgba(27,29,34,1)] min-h-screen flex flex-col justify-center items-center">
+        <img
+          src="/Banner-Render-Concept-footer.png"
+          alt="logo"
+          className="h-50 w-60 mb-12"
+        />
         <div className="w-full max-w-xs">
           <FormError />
           <form
