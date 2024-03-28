@@ -1,5 +1,6 @@
 import Banner from "@/components/banner";
 import EventCard from "@/components/eventCard";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import {
   FaTicketAlt,
