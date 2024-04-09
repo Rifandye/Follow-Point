@@ -34,7 +34,6 @@ export default function LoginPage() {
           >
             <div className="group w-full">
               <input
-                // type="email"
                 id="email"
                 placeholder=" "
                 className="input"
@@ -72,7 +71,7 @@ export default function LoginPage() {
             </button>
           </form>
           <div className="text-white mt-10 text-center">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/register">
               <label className="register-link">Register</label>
             </Link>

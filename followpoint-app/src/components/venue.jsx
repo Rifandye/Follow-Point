@@ -23,6 +23,7 @@ const boothPositions = [
 
 export function Venue({ data, onTenantClick }) {
   const { nodes, materials } = useGLTF("/venue.glb");
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <group dispose={null}>
@@ -32,7 +33,6 @@ export function Venue({ data, onTenantClick }) {
           boothPositions[index][1],
           boothPositions[index][2] + 100,
         ];
-        const [isHovered, setIsHovered] = useState(false);
 
         const defaultStyle = {
           color: "#fff",

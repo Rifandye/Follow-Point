@@ -4,6 +4,8 @@ import { useGLTF, Html } from "@react-three/drei";
 export function Bazar({ data, onTenantClick }) {
   const { nodes, materials } = useGLTF("/Bazar.glb");
 
+  const [hoveredItem, setHoveredItem] = useState(null);
+
   const getBoothProps = (index) => {
     const boothsData = [
       {
@@ -91,7 +93,8 @@ export function Bazar({ data, onTenantClick }) {
                 position[1],
                 position[2] + 500,
               ];
-              const [isHovered, setIsHovered] = useState(false);
+
+              const isHovered = item === hoveredItem;
 
               const defaultStyle = {
                 color: "#fff",
@@ -128,8 +131,8 @@ export function Bazar({ data, onTenantClick }) {
                     <button
                       key={item.name}
                       style={isHovered ? hoverStyle : defaultStyle}
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
+                      onMouseEnter={() => setHoveredItem(true)}
+                      onMouseLeave={() => setHoveredItem(false)}
                       onClick={() => onTenantClick(item)}
                     >
                       {item.name}
