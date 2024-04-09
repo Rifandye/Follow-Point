@@ -36,4 +36,4 @@ For any inquiries or feedback, feel free to contact me at [rilfransyah@gmail.com
 
 ---
 
-Followpoint - Your Destination for Seamless Shopping Experience
+Followpoint - Life is an event. Make it memorable
