@@ -36,4 +36,4 @@ For any inquiries or feedback, feel free to contact me at [rilfransyah@gmail.com
 
 ---
 
-Followpoint - Life is an event. Make it memorable
+Followpoint - Life is an event. Make it memorable!
