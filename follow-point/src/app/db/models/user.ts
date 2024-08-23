@@ -3,6 +3,7 @@ import { getCollection } from "../config";
 import { comparePass, hashPass } from "../helpers/bcrypt";
 import { User, UserCreatePayload, UserLoginPayload } from "./types";
 import { signToken } from "../helpers/jwt";
+import { ObjectId } from "mongodb";
 
 const UserInputSchema = z.object({
   name: z.string({ required_error: "Name is required" }),
@@ -79,5 +80,17 @@ export default class UserModel {
     });
 
     return access_token;
+  }
+
+  static async findById(id: string): Promise<User> {
+    const user = await this.getCollection().findOne({
+      _id: new ObjectId(String(id)),
+    });
+
+    if (!user) {
+      throw new Error("User Not Found");
+    }
+
+    return user as User;
   }
 }
