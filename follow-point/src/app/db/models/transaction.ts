@@ -37,4 +37,59 @@ export default class TransactionModel {
       throw error;
     }
   }
+
+  static async findByUserId(userId: ObjectId) {
+    try {
+      const agg = [
+        {
+          $match: {
+            userId: new ObjectId(String(userId)),
+          },
+        },
+        {
+          $lookup: {
+            from: "Events",
+            localField: "eventId",
+            foreignField: "_id",
+            as: "eventInfo",
+          },
+        },
+        {
+          $unwind: {
+            path: "$eventInfo",
+            preserveNullAndEmptyArrays: false,
+          },
+        },
+        {
+          $lookup: {
+            from: "Users",
+            localField: "userId",
+            foreignField: "_id",
+            as: "userInfo",
+          },
+        },
+        {
+          $unwind: {
+            path: "$userInfo",
+            preserveNullAndEmptyArrays: false,
+          },
+        },
+        {
+          $project: {
+            "userInfo.password": 0,
+          },
+        },
+        {
+          $sort: {
+            createdAt: -1,
+          },
+        },
+      ];
+
+      const transactions = await this.getCollection().aggregate(agg).toArray();
+      return transactions;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
