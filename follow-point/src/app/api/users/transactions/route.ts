@@ -1,7 +1,7 @@
 import TransactionModel from "@/app/db/models/transaction";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Response) {
+export async function GET(request: NextResponse) {
   try {
     const userId = request.headers.get("x-id-user") as string;
 
