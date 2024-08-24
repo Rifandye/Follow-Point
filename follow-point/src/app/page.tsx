@@ -32,7 +32,7 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <main className="h-full mx-20">
+      <main className="h-full mx-20 ">
         <section>
           <Banner />
         </section>
@@ -91,7 +91,7 @@ export default async function Home() {
         </section>
         <section>
           <div className="container mx-auto my-24 flex justify-center items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
               {data?.map((events: IEvents, index: number) => (
                 <EventsCard event={events} key={index} />
               ))}

@@ -1,0 +1,58 @@
+.markdown-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.markdown-body h1 {
+  font-size: 1.5em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body a {
+  text-decoration: underline;
+}
+
+.markdown-body p {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.markdown-body code {
+  background-color: #333333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.markdown-body pre {
+  background-color: #282c34;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 20px;
+}
+
+.markdown-body ul li::marker {
+  color: #00bfff;
+}
