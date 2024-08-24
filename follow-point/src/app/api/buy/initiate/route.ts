@@ -4,26 +4,30 @@ import UserModel from "@/app/db/models/user";
 import axios from "axios";
 import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
-import { uuid } from "uuidv4";
-const midtransClient = require("midtrans-client");
+import { v4 as uuidv4 } from "uuid";
+import midtransClient from "midtrans-client";
 
 //! Need more refactoring in the future
 export async function POST(request: NextRequest) {
   try {
     const { eventId, tickets, amount } = await request.json();
-    const order_id = uuid();
+
+    const order_id = uuidv4();
 
     const userId = request.headers.get("x-id-user");
+
+    console.log(userId, "<<<<< user id");
 
     if (!userId) {
       throw new Error("No User is found");
     }
 
     const user = await UserModel.findById(userId);
+    console.log(user, "<<<<<< user");
 
-    let snap = new midtransClient.snap({
+    let snap = new midtransClient.Snap({
       isProduction: false,
-      serverKey: process.env.MIDTRANS_SERVER_KEY,
+      serverKey: process.env.MIDTRANS_SERVER_KEY as string,
     });
 
     let parameter = {
@@ -40,7 +44,11 @@ export async function POST(request: NextRequest) {
     };
 
     const transaction = await snap.createTransaction(parameter);
+    console.log(transaction, "berhasil");
+
     const transactionToken = transaction.token;
+
+    console.log(transactionToken, "<<<<< ini transaction token");
 
     const ticketsArray: { ticketId: string; type: string }[] = [];
 
@@ -51,7 +59,7 @@ export async function POST(request: NextRequest) {
       if (typeof quantity === "number") {
         for (let i = 0; i < quantity; i++) {
           ticketsArray.push({
-            ticketId: uuid(),
+            ticketId: uuidv4(),
             type: type,
           });
         }
@@ -59,6 +67,8 @@ export async function POST(request: NextRequest) {
         throw new Error(`Invalid quantity type for ticket type ${type}`);
       }
     }
+
+    console.log("berhasil sampe sini");
 
     await TransactionModel.createTransaction({
       orderId: order_id,
@@ -71,6 +81,8 @@ export async function POST(request: NextRequest) {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
+
+    console.log("berhasil buat ke db");
 
     return NextResponse.json({ orderId: order_id, transactionToken });
   } catch (error) {
@@ -91,6 +103,8 @@ export async function PATCH(request: NextResponse) {
     const { orderId, tickets, eventId } = await request.json();
 
     const order = await TransactionModel.getByOrderId(orderId);
+
+    console.log(order, "<<<<< order nya");
 
     if (!order) {
       throw new Error("Order Not Found");
@@ -119,10 +133,15 @@ export async function PATCH(request: NextResponse) {
       }
     );
 
+    console.log(data, "<<<< data axios");
+
     if (data.status_code === "200" && data.transaction_status === "capture") {
-      await TransactionModel.updateOrderById(orderId);
+      const result = await TransactionModel.updateOrderById(orderId);
+      console.log("Berhasil update data order");
       await EventModel.decrementEventTicket(eventId, tickets);
       console.log("Updated transaction");
+
+      return NextResponse.json(result);
     } else {
       throw { name: "MidtransError" };
     }
