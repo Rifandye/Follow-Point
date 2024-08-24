@@ -11,16 +11,13 @@ import {
 
 export default async function Home() {
   const getAllEventData = async () => {
-    const response = await fetch(
-      process.env.NEXT_PUBLIC_BASE_URL + "/api/events",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        cache: "force-cache",
-      }
-    );
+    const response = await fetch("http://localhost:3000/api/events", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "force-cache",
+    });
 
     if (!response.ok) {
       return { message: "Error fetching data" };
