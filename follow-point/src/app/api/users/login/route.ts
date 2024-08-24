@@ -1,9 +1,9 @@
 import UserModel from "@/app/db/models/user";
 import { cookies } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
     const payload = await request.json();
     const result = await UserModel.login(payload);
