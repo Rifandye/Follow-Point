@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import "./page.css";
 import Image from "next/image";
 import ErrorComponent from "@/components/ErrorComponent";
+import { Suspense } from "react";
 
 export default async function LoginPage() {
   const handleLogin = async (formData: FormData) => {
@@ -43,7 +44,9 @@ export default async function LoginPage() {
           height={180}
           quality={100}
         />
-        <ErrorComponent />
+        <Suspense fallback={<div>Loading error message...</div>}>
+          <ErrorComponent />
+        </Suspense>
         <div className="w-full max-w-xs">
           <form
             className="flex flex-col items-center space-y-8"

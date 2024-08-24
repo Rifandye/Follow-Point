@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import "./page.css";
+import { Suspense } from "react";
 
 export default async function RegisterPage() {
   const handleRegister = async (formData: FormData) => {
@@ -41,7 +42,9 @@ export default async function RegisterPage() {
           height={180}
           quality={100}
         />
-        <ErrorComponent />
+        <Suspense fallback={<div>Loading error message...</div>}>
+          <ErrorComponent />
+        </Suspense>
         <div className="w-full max-w-xs">
           <form
             className="flex flex-col items-center space-y-8"

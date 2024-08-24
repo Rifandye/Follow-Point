@@ -1,7 +1,6 @@
 "use client";
 
 import { Suspense, useEffect, useRef, useState } from "react";
-import { getEventBySlug } from "../page";
 import CentralParkVenue from "@/components/CentralParkMap";
 import GreenFieldVenue from "@/components/GreenFieldMap";
 import BackButton from "@/components/BackButtonMap";
@@ -13,6 +12,7 @@ import { OrbitControls as ThreeOrbitControls } from "three-stdlib";
 import MouseControl from "@/components/MouseControler";
 import SideBarMap from "@/components/SidebarMap";
 import { IEvents } from "@/types";
+import { getEventBySlug } from "@/actions/payment";
 
 export default function MapEventPage({ params }: any) {
   const [venuesData, setVenuesData] = useState<IEvents | null>(null);

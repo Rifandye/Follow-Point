@@ -1,26 +1,6 @@
+import { getUserTransactions } from "@/actions/payment";
 import Navbar from "@/components/Navbar";
 import TicketCard from "@/components/TicketCard";
-import { cookies } from "next/headers";
-
-export const getUserTransactions = async () => {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL + "/api/users/transactions",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Cookie: cookies().toString(),
-      },
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error("Error!");
-  }
-
-  const { data } = await response.json();
-  return data;
-};
 
 export default async function UserTicketsPage() {
   const data = await getUserTransactions();

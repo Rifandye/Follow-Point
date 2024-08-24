@@ -5,25 +5,7 @@ import { formatDate } from "@/app/utils/formatDate";
 import ButtonSlugComponent from "@/components/ButtomSlug";
 import "./page.css";
 import Image from "next/image";
-
-export const getEventBySlug = async (slug: string) => {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL + "/api/events/" + slug,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error("Error fetching event details");
-  }
-
-  const { data } = await response.json();
-  return data;
-};
+import { getEventBySlug } from "@/actions/payment";
 
 export default async function EventBySlug({ params }: any) {
   const data = await getEventBySlug(params.slug);
