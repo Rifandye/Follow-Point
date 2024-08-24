@@ -5,6 +5,7 @@ import { readPayloadJose } from "./app/db/helpers/jwt";
 export async function middleware(request: NextRequest) {
   try {
     let token = cookies().get("Authorization")?.value.split(" ")[1];
+    console.log(token);
     if (!token) {
       return NextResponse.json(
         {
@@ -16,10 +17,10 @@ export async function middleware(request: NextRequest) {
       );
     }
 
-    const payload = await readPayloadJose<{ id: string }>(token);
+    const payload = await readPayloadJose<{ _id: string }>(token);
     const requestHeaders = new Headers(request.headers);
 
-    requestHeaders.set("x-id-user", payload.id);
+    requestHeaders.set("x-id-user", payload._id);
 
     const response = NextResponse.next({
       request: {
@@ -41,5 +42,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/api/user/:path*", "/api/buy/initiate/:path*"],
+  matcher: ["/api/users/:path*", "/api/buy/initiate/:path*"],
 };

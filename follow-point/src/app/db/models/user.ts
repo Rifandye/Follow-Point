@@ -4,6 +4,7 @@ import { comparePass, hashPass } from "../helpers/bcrypt";
 import { User, UserCreatePayload, UserLoginPayload } from "./types";
 import { signToken } from "../helpers/jwt";
 import { ObjectId } from "mongodb";
+import { cookies } from "next/headers";
 
 const UserInputSchema = z.object({
   name: z.string({ required_error: "Name is required" }),
@@ -76,7 +77,12 @@ export default class UserModel {
     }
 
     const access_token = signToken({
-      id: user._id.toString(),
+      _id: user._id,
+    });
+
+    cookies().set({
+      name: "Authorization",
+      value: `Bearer ${access_token}`,
     });
 
     return access_token;

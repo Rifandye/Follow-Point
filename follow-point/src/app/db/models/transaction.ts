@@ -27,15 +27,11 @@ export default class TransactionModel {
 
   static async updateOrderById(orderId: string) {
     try {
-      console.log(orderId, "<<<< ini orderId");
-      console.log("ini mau update");
       const data = await this.getCollection().findOneAndUpdate(
         { orderId: orderId },
         { $set: { paidStatus: true, paidDate: new Date() } },
         { returnDocument: "after" }
       );
-
-      console.log(data, "<<<< berhasil update");
 
       return "Success Updating Data";
     } catch (error) {
@@ -44,6 +40,7 @@ export default class TransactionModel {
   }
 
   static async findByUserId(userId: string) {
+    console.log(userId, "<<<< user id");
     try {
       const agg = [
         {

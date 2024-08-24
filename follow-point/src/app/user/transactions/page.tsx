@@ -3,15 +3,16 @@ import TicketCard from "@/components/TicketCard";
 import { cookies } from "next/headers";
 
 export const getUserTransactions = async () => {
-  const response = await fetch("http://localhost:3000/api/user/transactions", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Cookie: cookies().toString(),
-    },
-  });
-
-  console.log(response);
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_BASE_URL + "/api/users/transactions",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Cookie: cookies().toString(),
+      },
+    }
+  );
 
   if (!response.ok) {
     throw new Error("Error!");
