@@ -3,12 +3,12 @@ import TransactionModel from "@/app/db/models/transaction";
 import UserModel from "@/app/db/models/user";
 import axios from "axios";
 import { ObjectId } from "mongodb";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import midtransClient from "midtrans-client";
 
 //! Need more refactoring in the future
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const { eventId, tickets, amount } = await request.json();
 
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
 }
 
 //! Need more refactoring in the future
-export async function PATCH(request: Request) {
+export async function PATCH(request: NextRequest) {
   try {
     const { orderId, tickets, eventId } = await request.json();
 
