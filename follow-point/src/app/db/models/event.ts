@@ -35,7 +35,6 @@ export class EventModel {
     eventId: ObjectId,
     ticketsBody: TicketsBody
   ) {
-    console.log("sampe sini, untuk decrement");
     Object.entries(ticketsBody).forEach(async ([ticketId, amount]) => {
       try {
         await this.getCollection().updateOne(

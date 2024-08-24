@@ -16,14 +16,11 @@ export async function POST(request: NextRequest) {
 
     const userId = request.headers.get("x-id-user");
 
-    console.log(userId, "<<<<< user id");
-
     if (!userId) {
       throw new Error("No User is found");
     }
 
     const user = await UserModel.findById(userId);
-    console.log(user, "<<<<<< user");
 
     let snap = new midtransClient.Snap({
       isProduction: false,
@@ -44,11 +41,8 @@ export async function POST(request: NextRequest) {
     };
 
     const transaction = await snap.createTransaction(parameter);
-    console.log(transaction, "berhasil");
 
     const transactionToken = transaction.token;
-
-    console.log(transactionToken, "<<<<< ini transaction token");
 
     const ticketsArray: { ticketId: string; type: string }[] = [];
 
@@ -68,8 +62,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    console.log("berhasil sampe sini");
-
     await TransactionModel.createTransaction({
       orderId: order_id,
       userId: new ObjectId(String(userId)),
@@ -81,8 +73,6 @@ export async function POST(request: NextRequest) {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
-
-    console.log("berhasil buat ke db");
 
     return NextResponse.json({ orderId: order_id, transactionToken });
   } catch (error) {
@@ -103,8 +93,6 @@ export async function PATCH(request: NextResponse) {
     const { orderId, tickets, eventId } = await request.json();
 
     const order = await TransactionModel.getByOrderId(orderId);
-
-    console.log(order, "<<<<< order nya");
 
     if (!order) {
       throw new Error("Order Not Found");
@@ -133,13 +121,10 @@ export async function PATCH(request: NextResponse) {
       }
     );
 
-    console.log(data, "<<<< data axios");
-
     if (data.status_code === "200" && data.transaction_status === "capture") {
       const result = await TransactionModel.updateOrderById(orderId);
-      console.log("Berhasil update data order");
+
       await EventModel.decrementEventTicket(eventId, tickets);
-      console.log("Updated transaction");
 
       return NextResponse.json(result);
     } else {

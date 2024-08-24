@@ -7,14 +7,17 @@ export const createTransaction = async (
   amount: any,
   eventId: any
 ) => {
-  const response = await fetch("http://localhost:3000/api/buy/initiate", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Cookie: cookies().toString(),
-    },
-    body: JSON.stringify({ eventId, tickets, amount }),
-  });
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_BASE_URL + "/api/buy/initiate",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Cookie: cookies().toString(),
+      },
+      body: JSON.stringify({ eventId, tickets, amount }),
+    }
+  );
 
   const result = await response.json();
 
@@ -31,14 +34,17 @@ export const payTransaction = async (
   eventId: any
 ) => {
   console.log("Masuk Patch");
-  const response = await fetch("http://localhost:3000/api/buy/initiate", {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-      Cookie: cookies().toString(),
-    },
-    body: JSON.stringify({ orderId, tickets, eventId }),
-  });
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_BASE_URL + "/api/buy/initiate",
+    {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Cookie: cookies().toString(),
+      },
+      body: JSON.stringify({ orderId, tickets, eventId }),
+    }
+  );
 
   const result = await response.json();
 
