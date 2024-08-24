@@ -51,7 +51,7 @@ export default function SideBarMap({
                 </tr>
               </thead>
               <tbody>
-                {tenantData.items.map((item, index) => (
+                {tenantData.items.map((item: any, index: any) => (
                   <tr key={index}>
                     <td className="px-6 py-4">{item.itemName}</td>
                     <td className="px-6 py-4">Rp.{item.price}</td>

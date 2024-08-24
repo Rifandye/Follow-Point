@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Script from "next/script";
-import { createTransaction, payTransaction } from "@/actions/payment";
+import {
+  createTransaction,
+  getEventBySlug,
+  payTransaction,
+} from "@/actions/payment";
 import { formatRupiah } from "@/app/utils/formatPrice";
-import { getEventBySlug } from "../page";
 import Navbar from "@/components/Navbar";
 
 export default function EventBuyTicketPage({ params }: any) {
