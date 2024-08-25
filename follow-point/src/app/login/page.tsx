@@ -34,6 +34,7 @@ export default async function LoginPage() {
     console.log(result);
     console.log(result);
     console.log(result);
+    console.log(result);
     return redirect("/");
   };
 
