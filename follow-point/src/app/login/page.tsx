@@ -13,7 +13,7 @@ export default async function LoginPage() {
     const password = formData.get("password") as string;
 
     const response = await fetch(
-      process.env.NEXT_PUBLIC_BASE_URL  + "/api/auth/login",
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/auth/login",
       {
         method: "POST",
         headers: {
@@ -31,6 +31,7 @@ export default async function LoginPage() {
 
     cookies().set("Authorization", `Bearer ${result.access_token}`);
 
+    console.log(result);
     return redirect("/");
   };
 
