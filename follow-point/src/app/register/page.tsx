@@ -25,8 +25,6 @@ export default async function RegisterPage() {
 
     const result = await response.json();
 
-    console.log(result);
-
     if (!response.ok) {
       return redirect("/register?error=" + result.error);
     }
