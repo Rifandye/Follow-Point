@@ -12,6 +12,7 @@ export class EventModel {
       const events = await this.getCollection().find().toArray();
       return events;
     } catch (error) {
+      console.log("Error fetching all events data: ", error);
       throw error;
     }
   }
@@ -49,6 +50,8 @@ export class EventModel {
           `Error decreasing stock for ticketId: ${ticketId}`,
           error
         );
+
+        throw error;
       }
     });
   }

@@ -4,12 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   try {
     const result = await EventModel.getAllEvents();
-    return NextResponse.json(
-      {
-        data: result,
-      },
-      { status: 200 }
-    );
+    return NextResponse.json({ data: result });
   } catch (error) {
     return NextResponse.json(
       {
