@@ -31,10 +31,6 @@ export default async function LoginPage() {
 
     cookies().set("Authorization", `Bearer ${result.access_token}`);
 
-    console.log(result);
-    console.log(result);
-    console.log(result);
-    console.log(result);
     return redirect("/");
   };
 
