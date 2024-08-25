@@ -18,6 +18,7 @@ event space to the stage design and vendor booths, users can navigate and experi
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces, providing a dynamic and interactive experience for Follow Point users.
+
 - **Next.js**: A React framework enabling server-side rendering and generating static websites, making Follow Point fast and SEO-friendly.
 
 - **Three.js**: Utilized for 3D model rendering, enhancing the immersive experience of Follow Point.

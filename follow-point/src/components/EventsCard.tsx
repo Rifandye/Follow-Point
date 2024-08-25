@@ -16,13 +16,6 @@ export default function EventsCard({ event }: EventCardProps) {
           alt=""
           className="w-full h-full object-cover"
         />
-        {/* <Image
-          src={event.thumbnail}
-          alt="Banner"
-          width={800}
-          height={800}
-          objectFit="fill"
-        /> */}
       </Link>
     </div>
   );
