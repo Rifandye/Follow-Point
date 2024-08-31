@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import SideBar from "./SideBar";
 
 export default function Navbar() {
   return (
@@ -11,7 +12,9 @@ export default function Navbar() {
           <Image src={"/Logo-Navbar.png"} alt="logo" width={100} height={100} />
         </Link>
         <div className="flex-grow"></div>
-        <div>{/* <DropdownSidebar /> */}</div>
+        <div>
+          <SideBar />
+        </div>
       </div>
     </nav>
   );
