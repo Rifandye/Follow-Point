@@ -1,4 +1,4 @@
-import { handleLogout, isLoggedIn } from "@/actions/user";
+// import { handleLogout, isLoggedIn } from "@/actions/user";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -48,7 +48,7 @@ export default function SideBar() {
               Edit Profile
             </div>
           </Link>
-          {isLoggedIn() ? (
+          {/* {isLoggedIn() ? (
             <div
               className="text-yellow-400 text-lg mb-4 hover:text-white cursor-pointer"
               onClick={() => {
@@ -67,7 +67,7 @@ export default function SideBar() {
                 Login
               </div>
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </main>
